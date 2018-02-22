@@ -1,34 +1,29 @@
 
-    var speed = 50;
+    var ulDom = document.querySelector('.contentUl');   //列表容器
+    var liDom = document.getElementsByClassName('contentLi');   //条目
+    // var ulDom = ducoment.querySelector('.contentUl');
+
+    // 需求：每5s向上滚动一次
+
     var timer = null;
-    var target = document.querySelector('.contentUl');
-    var liHtml = document.querySelector('.contentLi');
-    var newLi = document.createElement('li');
-    newLi.className = 'contentLi';
-    newLi.innerHTML = liHtml.innerHTML;
-    target.appendChild(newLi);
-    function scrollAuto() {
-        if (newLi.offsetTop - target.scrollTop - 336 <= newLi.offsetHeight){
-                target.scrollTop =0;
-            }else {
-                target.scrollTop += 10;
-            }
-    }
-
-    target.onmouseover = function() {
-        clearInterval(timer)
-    }
-    target.onmouseout = function() {
-        timer = setInterval(scrollAuto, speed)
-    }
-
-    function scrolling() {
-        if(timer){
-            clearInterval(timer)
+    var step = 1;
+    var scrollRange = parseInt(liDom.length / 5);
+    console.log(scrollRange)
+    // console.log(scrollRange)
+    //向上滚动
+    function move() {
+        if(step > scrollRange) {
+            ulDom.style.transition = '-webkit-transform 0ms ease-out';
+            ulDom.style.transform = 'translateY(300px)';
+            setTimeout(function(){
+                ulDom.style.transition = 'all 1s';
+                ulDom.style.transform = 'translateY(0px)';
+            },100)
+            step = 1;
+            return;
         }
-        timer = setInterval(scrollAuto, speed)
+        distance = step * 315
+        ulDom.style.transform = 'translateY(-'+ distance +'px)';
+        step++
     }
-
-    setInterval(scrolling,5000)
-
-    //每5s向上滚动一次
+    timer = setInterval(move,3000);

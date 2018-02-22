@@ -109,8 +109,9 @@
     
     .contentUl {
         width: 100%;
-        overflow: hidden;
-        height: 300px;
+        /* overflow: hidden; */
+        /* height: 300px; */
+        transition:all 1s;
     }
     
     .headerLi {
@@ -123,6 +124,8 @@
         margin: 10px 0px;
         box-sizing: border-box;
         padding: 10px 20px;
+        overflow: hidden;
+        height: 300px;
     }
     
     .contentLi {
