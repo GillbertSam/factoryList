@@ -1,0 +1,131 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body,
+    html {
+        height: 100%;
+    }
+    
+    section {
+        box-sizing: border-box;
+        margin-top: 50px;
+        width: 100%;
+        height: 500px;
+        border: 1px solid #ccc;
+    }
+    
+    .container {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .title {
+        display: inline-block;
+        margin: 20px 0 20px 50%;
+        transform: translateX(-50%);
+    }
+    
+    .btn {
+        float: right;
+        margin: 20px 10% 0 0;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        height: 100%;
+    }
+    
+    .headerUl {
+        width: 90%;
+        box-shadow: 1px 1px 1px 1px #888888;
+    }
+    
+    .headerUl li {
+        width: 100%;
+    }
+    
+    .headerUl li:first-child span,
+    .contentUl li:first-child span {
+        border-top: none;
+    }
+    
+    .headerLi,
+    .contentLi {
+        display: flex;
+        text-align: center;
+    }
+    
+    .contentLi span {
+        border: 1px solid rgba(221, 215, 215, 0.719);
+    }
+    
+    .headerLi span:nth-of-type(1),
+    .contentLi span:nth-of-type(1) {
+        flex: 2;
+        border-left: none;
+    }
+    
+    .headerLi span:nth-of-type(2),
+    .contentLi span:nth-of-type(2) {
+        flex: 2;
+    }
+    
+    .headerLi span:nth-of-type(3),
+    .contentLi span:nth-of-type(3) {
+        flex: 3;
+    }
+    
+    .headerLi span:nth-of-type(4),
+    .contentLi span:nth-of-type(4) {
+        flex: 1;
+    }
+    
+    .headerLi span:nth-of-type(5),
+    .contentLi span:nth-of-type(5) {
+        flex: 5;
+    }
+    
+    .headerLi span:nth-of-type(6),
+    .contentLi span:nth-of-type(6) {
+        flex: 1;
+    }
+    
+    .headerLi span:nth-of-type(7),
+    .contentLi span:nth-of-type(7) {
+        flex: 3;
+        border-right: none;
+    }
+    
+    .contentUl {
+        width: 100%;
+        overflow: hidden;
+        height: 300px;
+    }
+    
+    .headerLi {
+        height: 72px;
+        line-height: 72px;
+        background: linear-gradient(#2dd, rgb(53, 27, 173));
+    }
+    
+    .contentWrap {
+        margin: 10px 0px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+    
+    .contentLi {
+        height: 60px;
+        line-height: 60px;
+    }

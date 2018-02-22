@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body,
+        html {
+            height: 100%;
+        }
+        
+        section {
+            box-sizing: border-box;
+            margin-top: 50px;
+            width: 100%;
+            height: 500px;
+            /* border: 1px solid #ccc; */
+        }
+        
+        .container {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        table {
+            width: 100%;
+            height: 80%;
+            border:1px solid #ccc;
+        }
+        
+        th {
+            height: 20%;
+            background-color: blue;
+            margin-bottom: 10px;
+        }
+        td {
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        tr:first-of-type  {
+            margin-bottom: 100px;
+        }
+        tr:last-of-type td {
+            border-bottom-color: transparent;
+        }
+        tr td:first-of-type {
+            border-left-color: transparent;
+        }
+        tr td:last-of-type {
+            border-right-color: transparent;
+        }
+        .title {
+            display: inline-block;
+            margin: 20px 0 20px 50%;
+            transform: translateX(-50%);
+        }
+        .btn {
+            float: right;
+            margin:20px 5% 0 0;
+        }
+        .coverLeft,.coverRight {
+            position: absolute;
+            width:2%;
+            height: 70%;
+            background-color: #fff;
+            top: 30%;
+        }
+        .coverLeft {
+            left: 0;
+        }
+        .coverRight {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>demo yrl</h1>
+    </header>
+    <section>
+        <div class="container">
+            <div>
+                <span class="title">KPI看板</span>
+                <button class="btn">获取数据</button>
+            </div>
+            <table border="0" border-collapse="collapse" cellspacing="0" cellpadding="0">
+                <th>工位</th>
+                <th>工单</th>
+                <th>成品号</th>
+                <th>工序</th>
+                <th>进度条</th>
+                <th>完成率</th>
+                <th>安灯</th>
+                <tr>
+                    <td>1</td>
+                    <td>20180211</td>
+                    <td>才智控制器</td>
+                    <td>2</td>
+                    <td>这是一个条</td>
+                    <td>30%</td>
+                    <td>工艺异常</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>20180211</td>
+                    <td>才智控制器</td>
+                    <td>2</td>
+                    <td>这是一个条</td>
+                    <td>30%</td>
+                    <td>工艺异常</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>20180211</td>
+                    <td>才智控制器</td>
+                    <td>2</td>
+                    <td>这是一个条</td>
+                    <td>30%</td>
+                    <td>工艺异常</td>
+                </tr>
+            </table>
+            <div class="coverLeft"></div>
+            <div class="coverRight"></div>
+        </div>
+    </section>
+
+</body>
+
+</html>
