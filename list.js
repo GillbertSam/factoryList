@@ -18,7 +18,7 @@
             setTimeout(function(){
                 ulDom.style.transition = 'all 1s';
                 ulDom.style.transform = 'translateY(0px)';
-            },100)
+            },50)
             step = 1;
             return;
         }
