@@ -1,15 +1,13 @@
 
     var ulDom = document.querySelector('.contentUl');   //列表容器
     var liDom = document.getElementsByClassName('contentLi');   //条目
-    // var ulDom = ducoment.querySelector('.contentUl');
 
     // 需求：每5s向上滚动一次
 
     var timer = null;
     var step = 1;
     var scrollRange = parseInt(liDom.length / 5);
-    console.log(scrollRange)
-    // console.log(scrollRange)
+
     //向上滚动
     function move() {
         if(step > scrollRange) {
